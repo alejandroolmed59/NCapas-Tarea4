@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar</title>
+</head>
+<body>
+    <form method="post" th:action="@{/productoResponse}" th:object="${producto}">
+        <div>
+            <label for="codigo">Codigo:</label>
+            <input id="codigo" type="text" name="nombres" th:field="*{codigo}">
+            <span th:errors="*{codigo}" style="color: #FF0000"></span>
+        </div>
+        <div>
+            <label for="nombre">Nombre producto:</label>
+            <input id="nombre" type="text" name="nombres" th:field="*{nombre}">
+            <span th:errors="*{nombre}" style="color: #FF0000"></span>
+        </div>
+        <div>
+            <label for="marca">Marca:</label>
+            <input id="marca" type="text" name="marca" th:field="*{marca}">
+            <span th:errors="*{marca}" style="color: #FF0000"></span>
+        </div>
+        <div>
+            <label for="descripcion">descripcion:</label>
+            <input id="descripcion" type="text" name="descripcion" th:field="*{descripcion}">
+            <span th:errors="*{descripcion}" style="color: #FF0000"></span>
+        </div>
+        <div>
+            <label for="stock">stock:</label>
+            <input id="stock" type="text" name="stock" th:field="*{stock}">
+            <span th:errors="*{stock}" style="color: #FF0000"></span>
+        </div>
+        <div>
+            <label for="fecha">fecha:</label>
+            <input id="fecha" type="text" name="fecha" th:field="*{fecha}">
+            <span th:errors="*{fecha}" style="color: #FF0000"></span>
+        </div>
+        <input type="submit" value="Guardar producto">
+    </form>
+    <p>Jose Alejandro Olmedo Araniva</p>
+</body>
+</html>
